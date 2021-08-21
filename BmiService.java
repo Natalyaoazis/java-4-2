@@ -1,24 +1,24 @@
 public class BmiService {
-    public String calculate(double weight, double height) {
+    public int calculate(double weight, double height) {
         double bmi = weight / (height * height / 100 / 100);
         int indexBodyMass = (int) bmi;
         if (bmi >= 16.5 && bmi <= 18.49) {
-            return (indexBodyMass + " Недостаточная (дефицит) масса тела");
+            return indexBodyMass;
         } if (bmi < 16.5) {
-            return (indexBodyMass +  " дефицит массы тела");
+            return indexBodyMass;
         } if (bmi>=18.5 && bmi<=24.99) {
-           return (indexBodyMass + " Норма");
+           return indexBodyMass;
         } if (bmi>=25 && bmi<=29.99) {
-            return (indexBodyMass + " Избыточная масса тела (предожирение)");
+            return indexBodyMass;
         } if (bmi>=30 && bmi<=34.99) {
-            return (indexBodyMass + " Ожирение первой степени");
+            return indexBodyMass;
         } if (bmi>=35 && bmi<=39.99) {
-            return (indexBodyMass + " Ожирение второй степени");
+            return indexBodyMass;
         } if (bmi>=40) {
-            return (indexBodyMass + " Ожирение третьей степени (морбидное)");
+            return indexBodyMass;
         }
         else
-        return null;
+        return indexBodyMass;
           }
 }
 
